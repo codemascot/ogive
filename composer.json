@@ -1,0 +1,24 @@
+{
+	"name": "ogive/ogive",
+	"description": "A widget plugin to show site statistics in frontend.",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "GPL-2.0",
+	"type": "wordpress-plugin",
+	"authors": [
+		{
+			"name": "Khan M Rashedun-Naby",
+			"email": "naby88@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"TheDramatist\\Ogive\\": "src/"
+		}
+	}
+}
