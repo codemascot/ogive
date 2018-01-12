@@ -5,7 +5,7 @@
  * Description: A widget plugin to show site statistics in frontend.
  * Plugin URI:  https://github.com/rnaby
  * Author:      TheDramatist
- * Author URI:  http://rnaby.github.com/
+ * Author URI:  http://thedramatist.me/
  * Version:     dev-master
  * License:     GPL-2.0
  * Text Domain: ogive
@@ -54,6 +54,8 @@ function initialize() {
 		 * Calling modules.
 		 */
 		( new Assets\AssetsEnqueue() )->init();
+		( new Widget\InitWidget() )->init();
+		( new ConfigAPI\ConfigAPI() )->init();
 
 	} catch ( \Throwable $throwable ) {
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {

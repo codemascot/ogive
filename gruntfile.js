@@ -3,10 +3,6 @@ module.exports = function (grunt) {
 		config: {
 			system: {
 				root: './',
-				scripts: {
-					src: './assets/js/src/',
-					dist: './assets/js/'
-				},
 				styles: {
 					src: './assets/scss/',
 					dist: './assets/css/'
@@ -75,37 +71,13 @@ module.exports = function (grunt) {
 			}
 		},
 
-		// scripts *************************************************
-		browserify: {
-			system: {
-				options: {
-					transform: [
-						["babelify", { "presets": ["es2015"] }]
-					]
-				},
-				src: '<%= config.system.scripts.src %>',
-				dest: '<%= config.system.scripts.dist %>'
-			}
-		},
-		uglify: {
-			system: {
-				expand: true,
-				ext: '.min.js',
-				cwd: '<%= config.system.scripts.dist %>',
-				dest: '<%= config.system.scripts.dist %>',
-				src: ['*.js', '!*.min.js', '!prism.js']
-			}
-		},
-
 		// watch *************************************************
 		watch: {
 			files: [
 				'<%= config.system.styles.src %>/*.scss',
-				'<%= config.system.styles.src %>/**/*.scss',
-				'<%= config.system.scripts.src %>/*.js',
-				'<%= config.system.scripts.src %>/**/*.js'
+				'<%= config.system.styles.src %>/**/*.scss'
 			],
-			tasks: ['javascript:system', 'css:system']
+			tasks: ['css:system']
 		}
 	};
 
@@ -114,13 +86,6 @@ module.exports = function (grunt) {
 	grunt.initConfig(configObject);
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	// Register tasks
-	grunt.registerTask(
-		'javascript:system',
-		[
-			'browserify:system',
-			'uglify:system'
-		]
-	);
 	grunt.registerTask(
 		'css:system',
 		[
@@ -135,7 +100,6 @@ module.exports = function (grunt) {
 	grunt.registerTask(
 		'default',
 		[
-			'javascript:system',
 			'css:system'
 		]
 	);
