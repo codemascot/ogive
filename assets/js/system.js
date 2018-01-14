@@ -5,6 +5,9 @@
 	var baseURL     = OgiveAjaxObj.site_url;
 	var sites       = OgiveAjaxObj.sites;
 	var dataTypes   = OgiveAjaxObj.data_types;
+	var refreshTime = OgiveAjaxObj.refresh_time;
+
+	// Main DOM
 	var div         = '.ogive-stats';
 
 	/**
@@ -12,11 +15,12 @@
 	 */
 	$( function() {
 		rendering_data();
-		window.setInterval(function() {
-			// this will execute on every 5 seconds
+		window.setInterval( function() {
+			// Making DOM Empty
 			$( div ).empty();
+			// Rendering New Data
 			rendering_data();
-		}, 60000);
+		}, refreshTime );
 	} );
 
 	/**

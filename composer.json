@@ -1,6 +1,6 @@
 {
-	"name": "ogive/ogive",
-	"description": "A widget plugin to show site statistics in frontend.",
+	"name": "rnaby/ogive",
+	"description": "A widget plugin to show AJAXified site statistics in frontend.",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"license": "GPL-2.0",

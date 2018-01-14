@@ -2,6 +2,10 @@
 
 namespace TheDramatist\Ogive\Widget;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit called directly.
+}
+
 /**
  * Class Widget
  *
@@ -55,7 +59,7 @@ class Widget extends \WP_Widget {
 	public function form( $instance ) {
 		$title = ! empty( $instance[ 'title' ] ) ? $instance[ 'title' ]
 			: esc_html__( 'Ogive Site Statistics', 'ogive' );
-		require 'Views/html-form.php';
+		require 'Views/html-backend-form.php';
 	}
 	
 	/**

@@ -2,6 +2,10 @@
 
 namespace TheDramatist\Ogive\Assets;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if called directly.
+}
+
 /**
  * Class AssetsEnqueue
  *
@@ -53,7 +57,7 @@ class AssetsEnqueue {
 			true
 		);
 		// Local JS data
-		$local_js_data = [
+		$local_js_data = apply_filters( 'ogive_local_js_data', [
 			'ajax_url'      => admin_url( 'admin-ajax.php' ),
 			'site_url'      => site_url(),
 			'sites'         => $this->get_sites(),
@@ -62,7 +66,8 @@ class AssetsEnqueue {
 				'comments'       => __( 'Comments' ),
 				'users'          => __( 'Users' ),
 			],
-		];
+			'refresh_time'  => 60000, // 60*1000 ms = 60s or 1 minute
+		] );
 		// Pass data to myscript.js on page load
 		wp_localize_script(
 			'ogive-js',

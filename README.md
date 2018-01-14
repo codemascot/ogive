@@ -13,7 +13,6 @@ A widget plugin to show site statistics in frontend.
 
 ## Coding styles and technique
 * All input data escaped and validated.
-* **TDD:** Some **PHPUnit** tests Has been written.
 * Developed as *Composer* package.
 * **YODA** condition check applied.
 * Maintained ***Right Margin*** carefully. Usually that is 80 characters.

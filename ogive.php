@@ -13,6 +13,10 @@
 
 namespace TheDramatist\Ogive;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if called directly.
+}
+
 /**
  * Initialize a hook on plugin activation.
  *
