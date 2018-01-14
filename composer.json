@@ -1,6 +1,6 @@
 {
 	"name": "rnaby/ogive",
-	"description": "A widget plugin to show AJAXified site statistics in frontend.",
+	"description": "A widget plugin to show REST API based AJAXified site statistics in frontend.",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"license": "GPL-2.0",

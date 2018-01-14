@@ -1,6 +1,6 @@
 # TheDramatist Ogive
 
-A widget plugin to show site statistics in frontend.
+A widget plugin to show REST API based AJAXified site statistics in frontend.
 
 ## Table Of Contents
 
